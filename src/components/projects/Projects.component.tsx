@@ -3,8 +3,12 @@ import ProjectsItem from "./projects-item/ProjectsItem.component";
 
 const Projects = () => {
   return (
-    <section className="projects container">
-      <ProjectsItem></ProjectsItem>
+    <section className="projects">
+      <span className="projects__line"></span>
+      <div className="container">
+        <h1 className="fs-title">{"PROJETOS =>"}</h1>
+        <ProjectsItem></ProjectsItem>
+      </div>
     </section>
   );
 };
