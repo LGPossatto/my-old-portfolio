@@ -1,0 +1,151 @@
+@import "./varibles.style";
+@import "./mixins.style";
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: $font-main;
+  color: $color-white;
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+}
+
+body {
+  background-color: $color-black;
+  font-size: 1.6rem;
+  letter-spacing: 0.1rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+// --------------------------------------------------------------- //
+// --------------------------- HELPER ---------------------------- //
+// --------------------------------------------------------------- //
+
+.container {
+  max-width: 1920px;
+
+  margin-left: 10%;
+  margin-right: 10%;
+
+  @include bp-big {
+    margin-left: 7.5%;
+    margin-right: 7.5%;
+  }
+
+  @include bp-tablet {
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+  }
+}
+
+.hide-on-desktop {
+  @include bp-desktop-only {
+    display: none !important;
+  }
+}
+
+.hide-on-mobile {
+  @include bp-tablet {
+    display: none !important;
+  }
+}
+
+// FLEX
+.flex {
+  display: flex;
+
+  &-fw-w {
+    flex-wrap: wrap;
+  }
+
+  &-fd-c {
+    flex-direction: column;
+  }
+}
+
+// ALIGN HELPERS
+.ai {
+  &-c {
+    align-items: center;
+  }
+}
+
+.jc {
+  &-c {
+    justify-content: center;
+  }
+
+  &-sb {
+    justify-content: space-between;
+  }
+
+  &-se {
+    justify-content: space-evenly;
+  }
+}
+
+// --------------------------------------------------------------- //
+// ---------------------------- TEXT ----------------------------- //
+// --------------------------------------------------------------- //
+
+// FONT SIZE
+.fs {
+  &-header {
+    font-size: 4rem;
+  }
+  &-title {
+    font-size: 2.8rem;
+  }
+  &-default {
+    font-size: 1.6rem;
+  }
+  &-secondary {
+    font-size: 1.4rem;
+  }
+  &-tertiary {
+    font-size: 1.2rem;
+  }
+
+  @include bp-tablet {
+    &-header {
+      font-size: 3.2rem;
+    }
+    &-title {
+      font-size: 2.2rem;
+    }
+  }
+}
+
+// FONT COLOR
+.fc {
+  &-reverse {
+    color: $color-black;
+  }
+  &-gray {
+    color: $color-gray;
+  }
+  &-success {
+    color: $color-success;
+  }
+  &-danger {
+    color: $color-danger;
+  }
+}

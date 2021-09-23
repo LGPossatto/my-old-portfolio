@@ -1,0 +1,38 @@
+@import "../../assets/styles/varibles.style";
+@import "../../assets/styles/mixins.style";
+
+.header {
+  padding: 50px 0;
+
+  &__hey {
+    font-size: 4rem;
+    margin-bottom: -0.5em;
+  }
+  &__name {
+    font-size: 15rem;
+    margin-left: -0.05em;
+  }
+  &__more {
+    font-size: 5rem;
+    margin-top: -0.25em;
+  }
+
+  @include bp-big {
+    &__hey {
+      font-size: calc(1.6rem + 1vw);
+    }
+    &__name {
+      font-size: calc(4rem + 5vw);
+    }
+    &__more {
+      font-size: calc(2rem + 1.5vw);
+    }
+  }
+
+  @include bp-small {
+    &__name {
+      font-size: calc(3.2rem + 5vw);
+      margin-left: -0.03em;
+    }
+  }
+}

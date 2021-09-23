@@ -1,0 +1,7 @@
+import "./navbar.style.scss";
+
+const Navbar = () => {
+  return <nav className="navbar"></nav>;
+};
+
+export default Navbar;
