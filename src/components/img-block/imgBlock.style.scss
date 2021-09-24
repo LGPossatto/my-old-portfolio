@@ -1,0 +1,29 @@
+@import "../../assets/styles/varibles.style";
+@import "../../assets/styles/mixins.style";
+
+.img-block {
+  max-width: 25%;
+  margin: 50px 25px;
+
+  text-align: justify;
+
+  img {
+    width: 100%;
+    margin-bottom: 25px;
+  }
+
+  h1 {
+    text-align: center;
+  }
+
+  @include bp-small {
+    max-width: 33%;
+    min-width: 350px;
+  }
+
+  @include bp-mobile {
+    max-width: 100%;
+    min-width: 250px;
+    margin: 50px 0px;
+  }
+}

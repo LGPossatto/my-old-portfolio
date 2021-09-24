@@ -1,14 +1,19 @@
+import { FC } from "react";
 import { Link } from "react-router-dom";
 
 import "./projectsItem.style.scss";
 
-const ProjectsItem = () => {
+interface IProjectsItem {
+  name: string;
+  desc: string;
+  link: string;
+}
+
+const ProjectsItem: FC<IProjectsItem> = ({ name, desc, link }) => {
   return (
-    <Link to="/test" className="projects-item">
-      <h1 className="fs-header">Project Name</h1>
-      <p className="fs-subtitle fc-gray">
-        Description Descr ipti on Desc rip tion
-      </p>
+    <Link to={link} className="projects-item">
+      <h1 className="fs-header">{name}</h1>
+      <p className="fs-subtitle fc-gray">{desc}</p>
     </Link>
   );
 };

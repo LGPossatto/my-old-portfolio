@@ -7,7 +7,11 @@ const Projects = () => {
       <span className="projects__line"></span>
       <div className="container">
         <h1 className="fs-title">{"PROJETOS =>"}</h1>
-        <ProjectsItem></ProjectsItem>
+        <ProjectsItem
+          name="Project Name"
+          desc="Description Descr ipti on Desc rip tion"
+          link="/projects/projectID"
+        ></ProjectsItem>
       </div>
     </section>
   );
