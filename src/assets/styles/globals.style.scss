@@ -118,6 +118,9 @@ li {
   &-subtitle {
     font-size: 4rem;
   }
+  &-text {
+    font-size: 3rem;
+  }
 
   @include bp-big {
     &-header {
@@ -128,6 +131,9 @@ li {
     }
     &-subtitle {
       font-size: calc(1.6rem + 1vw);
+    }
+    &-text {
+      font-size: calc(1.6rem + 0.5vw);
     }
   }
 
