@@ -1,12 +1,9 @@
-import { useReducer } from "react";
-
 import ProjectsContext, { IProjects } from "./ProjectsContext.context";
-import ProjectsReducer from "./ProjectsReducer.context";
 
 import imgTest from "../assets/images/placeholder.jpg";
 
 const ProjectsProvider = (props: any) => {
-  const inicialValue: IProjects = {
+  const value: IProjects = {
     projects: [
       {
         title: "projectID",
@@ -17,10 +14,8 @@ const ProjectsProvider = (props: any) => {
     ],
   };
 
-  const [state, dispatch] = useReducer(ProjectsReducer, inicialValue);
-
   return (
-    <ProjectsContext.Provider value={{ projects: state.projects }}>
+    <ProjectsContext.Provider value={{ projects: value.projects }}>
       {props.children}
     </ProjectsContext.Provider>
   );
