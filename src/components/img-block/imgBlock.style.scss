@@ -5,7 +5,7 @@
   max-width: 25%;
   margin: 50px 25px;
 
-  text-align: justify;
+  text-align: center;
 
   img {
     object-fit: cover;
@@ -16,6 +16,7 @@
 
   h1 {
     text-align: center;
+    line-height: 1.5;
   }
 
   @include bp-small {

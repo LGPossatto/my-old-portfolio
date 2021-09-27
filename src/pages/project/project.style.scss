@@ -4,7 +4,7 @@
 .project {
   padding: calc(50px + 5vh) 0;
 
-  text-align: justify;
+  text-align: center;
 
   &__head-img {
     width: 100%;
@@ -22,11 +22,15 @@
   }
 
   &__header-title {
-    h1 {
-      margin-bottom: 25px;
+    h1,
+    h2 {
+      line-height: 1.5;
     }
     p {
-      margin-bottom: calc(50px + 2.5vh);
+      margin-bottom: 50px;
+    }
+    p:last-of-type {
+      margin-bottom: calc(75px + 2.5vh);
     }
   }
 

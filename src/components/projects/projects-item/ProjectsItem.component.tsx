@@ -6,12 +6,11 @@ import "./projectsItem.style.scss";
 interface IProjectsItem {
   name: string;
   desc: string;
-  link: string;
 }
 
-const ProjectsItem: FC<IProjectsItem> = ({ name, desc, link }) => {
+const ProjectsItem: FC<IProjectsItem> = ({ name, desc }) => {
   return (
-    <Link to={link} className="projects-item">
+    <Link to={`/projects/${name}`} className="projects-item">
       <h1 className="fs-header">{name}</h1>
       <p className="fs-subtitle fc-gray">{desc}</p>
     </Link>
