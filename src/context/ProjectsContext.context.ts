@@ -6,6 +6,8 @@ export interface IProject {
   titleDesc: string;
   descList: string[];
   tech: string;
+  gitLink: string;
+  siteLink: string;
   extraInfo: { headImg: string; title: string; desc: string }[];
 }
 
