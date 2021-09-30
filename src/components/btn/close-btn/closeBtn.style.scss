@@ -1,0 +1,28 @@
+@import "../../../assets/styles/mixins.style";
+
+.close-btn {
+  cursor: pointer;
+
+  display: block;
+  position: fixed;
+  top: 0;
+  right: 0;
+
+  background: white;
+  width: max-content;
+
+  padding: 0.25em;
+  margin: 1em 0;
+  margin-right: calc((100% - 1920px) / 2);
+
+  border-radius: 50%;
+
+  @include bp-big {
+    margin-right: 7.5%;
+  }
+
+  @include bp-tablet {
+    margin: 1.5em 0;
+    margin-right: calc(1em + 2.5%);
+  }
+}

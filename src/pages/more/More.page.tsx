@@ -1,3 +1,5 @@
+import LinkBtn from "../../components/btn/link-btn/LinkBtn.component";
+
 import "./more.style.scss";
 
 const More = () => {
@@ -17,6 +19,27 @@ const More = () => {
         <p className="fs-text">
           <strong>Phone:</strong> (45) 99838-9983
         </p>
+      </div>
+      <div className="more__about">
+        <h1 className="fs-subtitle">{"Links =>"}</h1>
+        <LinkBtn
+          link="https://github.com/LGPossatto"
+          text="GitHub"
+          blank
+          smallText
+        ></LinkBtn>
+        <LinkBtn
+          link="https://www.linkedin.com/in/luiz-gustavo-possatto/"
+          text="LinkedIn"
+          blank
+          smallText
+        ></LinkBtn>
+        <LinkBtn
+          link="https://docs.google.com/document/d/1WtM29685RdqS0biA5UFWBZIkHNy6VsNVgz6DX8WUU_E/edit?usp=sharing"
+          text="Currículo"
+          blank
+          smallText
+        ></LinkBtn>
       </div>
       <div className="more__about">
         <h1 className="fs-subtitle">{"Sobre Min =>"}</h1>

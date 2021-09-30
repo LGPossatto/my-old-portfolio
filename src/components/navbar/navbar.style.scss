@@ -1,8 +1,21 @@
+@import "./../../assets/styles/mixins.style";
+
 .navbar {
   margin-top: calc(25px + 1vh);
 
-  svg {
-    width: 50px;
-    height: 50px;
+  a {
+    display: block;
+
+    svg {
+      cursor: pointer;
+
+      width: 65px;
+      height: 65px;
+
+      @include bp-big {
+        width: calc(50px + 1vw);
+        height: calc(50px + 1vw);
+      }
+    }
   }
 }

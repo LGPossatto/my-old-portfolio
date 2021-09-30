@@ -7,7 +7,7 @@ import projectsContext, {
 
 import "./project.style.scss";
 
-import Btn from "../../components/btn/Btn.component";
+import LinkBtn from "../../components/btn/link-btn/LinkBtn.component";
 import ImgBlock from "../../components/img-block/ImgBlock.component";
 
 const Project = () => {
@@ -33,8 +33,8 @@ const Project = () => {
           alt="imagem capa"
         />
         <div className="project__btns">
-          <Btn text="Código" link={project.gitLink} blank></Btn>
-          <Btn text="Visitar" link={project.siteLink} blank></Btn>
+          <LinkBtn text="Código" link={project.gitLink} blank></LinkBtn>
+          <LinkBtn text="Visitar" link={project.siteLink} blank></LinkBtn>
         </div>
         <div className="project__text-box">
           <h1 className="fs-title">{project.title.toUpperCase()}</h1>
