@@ -10,10 +10,14 @@
   right: 0;
   bottom: 0;
 
-  background-color: rgba($color-black, 0.75);
+  background-color: rgba($color-black, 0.85);
 
   img {
     max-width: 80%;
     max-height: 80%;
   }
+}
+
+.img-modal-show {
+  display: flex;
 }

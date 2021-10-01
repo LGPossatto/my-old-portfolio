@@ -1,3 +1,4 @@
+import BackBtn from "../../components/btn/back-btn/BackBtn.component";
 import LinkBtn from "../../components/btn/link-btn/LinkBtn.component";
 
 import "./more.style.scss";
@@ -5,6 +6,7 @@ import "./more.style.scss";
 const More = () => {
   return (
     <section className="more container">
+      <BackBtn></BackBtn>
       <div className="more__about">
         <h1 className="fs-subtitle">{"Perfil =>"}</h1>
         <p className="fs-text">
@@ -61,23 +63,19 @@ const More = () => {
         <p className="fs-text">- C# Completo + POO - Nelio Alves;</p>
         <p className="fs-text">- Programação em Python - Geek University;</p>
         <p className="fs-text">- React Front To Back - Brad Traversy;</p>
-        <p className="fs-text">
-          - *Complete React Developer - Andrei Neagoie, Yihua Zhang;
-        </p>
         <p className="fs-text">- JavaScript Algorithms and DS - Colt Steele;</p>
         <p className="fs-text">
           {
-            "- *Complete Web & Mobile Designer - Andrei Neagoie, Daniel Schifano;"
+            "- Complete Web & Mobile Designer - Andrei Neagoie, Daniel Schifano;"
           }
         </p>
-        <p className="fs-text">- **e mais.</p>
+        <p className="fs-text">- e mais.*</p>
         <div className="helper-xtr">
-          <p className="fs-text fc-gray">* Cursos não finalizados.</p>
           <p className="fs-text fc-gray">
-            ** Mais se refere a cursos e vídeo aulas feitas através do YouTube,
-            sobre HTML, CSS, JavaScript, TypeScript, React, NodeJs, GraphQL. Os
-            canais mais utilizados foram freeCodeCamp, Traversy Media, Coding
-            Addict, The Net Ninja.
+            * Mais se refere a cursos e vídeo aulas feitas através do YouTube,
+            sobre HTML, CSS, JavaScript, TypeScript, React, NodeJs, GraphQL.
+            Alguns dos canais mais utilizados foram freeCodeCamp, Traversy
+            Media, Coding Addict, The Net Ninja.
           </p>
         </div>
       </div>

@@ -3,18 +3,26 @@ import ProjectsContext, { IProjects } from "./ProjectsContext.context";
 //import imgTest from "../assets/images/placeholder.jpg";
 
 import imgTC from "../assets/images/img-twitter-comment.jpg";
+import imgTCs from "../assets/images/img-twitter-comment-small.jpg";
 import imgTE from "../assets/images/img-twitter-explore.jpg";
+import imgTEs from "../assets/images/img-twitter-explore-small.jpg";
 import imgTM from "../assets/images/img-twitter-mobile.png";
+import imgTMs from "../assets/images/img-twitter-mobile-small.png";
 import imgTH from "../assets/images/img-twitter-main.jpg";
 
 import imgNC from "../assets/images/img-news-categories.jpg";
+import imgNCs from "../assets/images/img-news-categories-small.jpg";
 import imgNS from "../assets/images/img-news-search.jpg";
+import imgNSs from "../assets/images/img-news-search-small.jpg";
 import imgNM from "../assets/images/img-news-mobile.png";
+import imgNMs from "../assets/images/img-news-mobile-small.png";
 import imgNH from "../assets/images/img-news-main.jpg";
 
-import imgSU from "../assets/images/img-server-user.jpg";
+import imgSUs from "../assets/images/img-server-user-small.jpg";
 import imgSQ from "../assets/images/img-server-query.jpg";
+import imgSQs from "../assets/images/img-server-query-small.jpg";
 import imgSE from "../assets/images/img-server-events.jpg";
+import imgSEs from "../assets/images/img-server-events-small.jpg";
 import imgSH from "../assets/images/img-server-main.jpg";
 
 const ProjectsProvider = (props: any) => {
@@ -36,17 +44,20 @@ const ProjectsProvider = (props: any) => {
           {
             title: "Mobile",
             desc: "Design responsivo dependendo da largura da tela do dispositivo.",
-            headImg: imgTM,
+            headImg: imgTMs,
+            displayImg: imgTM,
           },
           {
             title: "Sua Conta",
             desc: "Crie uma conta e comece a postar na sua linha do tempo. Interaja com outras contas através de likes e comentários.",
-            headImg: imgTC,
+            headImg: imgTCs,
+            displayImg: imgTC,
           },
           {
             title: "Explore",
             desc: "Siga outras contas para ver suas publicações e interagir com elas.",
-            headImg: imgTE,
+            headImg: imgTEs,
+            displayImg: imgTE,
           },
         ],
       },
@@ -66,17 +77,20 @@ const ProjectsProvider = (props: any) => {
           {
             title: "Mobile",
             desc: "Design responsivo dependendo da largura da tela do dispositivo.",
-            headImg: imgNM,
+            headImg: imgNMs,
+            displayImg: imgNM,
           },
           {
             title: "Diferentes Categorias",
             desc: "Navegue e busque por diferentes notícias.",
-            headImg: imgNS,
+            headImg: imgNSs,
+            displayImg: imgNS,
           },
           {
             title: "Pesquise Por Mais",
             desc: "Busque notícias mais específicas através da barra de pesquisa.",
-            headImg: imgNC,
+            headImg: imgNCs,
+            displayImg: imgNC,
           },
         ],
       },
@@ -97,17 +111,20 @@ const ProjectsProvider = (props: any) => {
           {
             title: "Query Events",
             desc: "Busque por eventos, e receba de volta só aquilo que foi pedido.",
-            headImg: imgSQ,
+            headImg: imgSQs,
+            displayImg: imgSQ,
           },
           {
             title: "Contas de Usuário",
             desc: "Crie contas de usuários e faça login através de JSON Web Tokens.",
-            headImg: imgSE,
+            headImg: imgSEs,
+            displayImg: imgSE,
           },
           {
             title: "Crie Eventos",
             desc: "Crie eventos, salve e exclua como desejar.",
-            headImg: imgSU,
+            headImg: imgSUs,
+            displayImg: imgSE,
           },
         ],
       },

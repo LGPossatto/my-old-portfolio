@@ -11,6 +11,7 @@ interface IProjectsItem {
 const ProjectsItem: FC<IProjectsItem> = ({ name, desc }) => {
   return (
     <Link to={`/projects/${name}`} className="projects-item">
+      <div className="mob-arrow">{"=>"}</div>
       <h1 className="fs-header">{name}</h1>
       <p className="fs-subtitle fc-gray">{desc}</p>
     </Link>

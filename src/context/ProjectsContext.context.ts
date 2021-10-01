@@ -8,7 +8,12 @@ export interface IProject {
   tech: string;
   gitLink: string;
   siteLink: string;
-  extraInfo: { headImg: string; title: string; desc: string }[];
+  extraInfo: {
+    headImg: string;
+    displayImg: string;
+    title: string;
+    desc: string;
+  }[];
 }
 
 export interface IProjects {

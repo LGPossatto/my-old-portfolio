@@ -8,6 +8,7 @@ import projectsContext, {
 import "./project.style.scss";
 
 import LinkBtn from "../../components/btn/link-btn/LinkBtn.component";
+import BackBtn from "../../components/btn/back-btn/BackBtn.component";
 import ImgBlock from "../../components/img-block/ImgBlock.component";
 
 const Project = () => {
@@ -26,6 +27,7 @@ const Project = () => {
 
   return (
     <div className="project container">
+      <BackBtn></BackBtn>
       <section className="project__header-title flex flex-fd-c ai-c">
         <img
           className="project__head-img"
@@ -53,6 +55,7 @@ const Project = () => {
             title={extra.title}
             desc={extra.desc}
             img={extra.headImg}
+            imgDisplay={extra.displayImg}
           ></ImgBlock>
         ))}
       </section>

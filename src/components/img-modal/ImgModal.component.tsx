@@ -1,13 +1,19 @@
-import "./imgModal.style.scss";
-import imgTest from "../../assets/images/img-news-categories.jpg";
+import { FC } from "react";
 
+import "./imgModal.style.scss";
 import CloseBtn from "../btn/close-btn/CloseBtn.component";
 
-const ImgModal = () => {
+interface IImgModal {
+  show: boolean;
+  setShow: Function;
+  img: string;
+}
+
+const ImgModal: FC<IImgModal> = ({ show, setShow, img }) => {
   return (
-    <div className="img-modal flex ai-c jc-c">
-      <CloseBtn handleClick={() => console.log("ok")}></CloseBtn>
-      <img src={imgTest} alt="imagem" />
+    <div className={`img-modal flex ai-c jc-c ${show ? "img-modal-show" : ""}`}>
+      <CloseBtn handleClick={() => setShow(false)}></CloseBtn>
+      <img src={img} alt="imagem" />
     </div>
   );
 };
