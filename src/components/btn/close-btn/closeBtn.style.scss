@@ -19,7 +19,7 @@
   border-radius: 50%;
 
   transform: scale(0%);
-  animation: scaleZeroToMax 0.25s ease-in-out forwards;
+  animation: scaleZeroToMax 0.5s ease-in-out forwards;
 
   @include bp-big {
     margin-right: 7.5%;

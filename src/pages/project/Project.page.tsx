@@ -9,6 +9,7 @@ import "./project.style.scss";
 
 import LinkBtn from "../../components/btn/link-btn/LinkBtn.component";
 import BackBtn from "../../components/btn/back-btn/BackBtn.component";
+import LoadBar from "../../components/load-bar/LoadBar.component";
 import ImgBlock from "../../components/img-block/ImgBlock.component";
 
 const Project = () => {
@@ -29,11 +30,13 @@ const Project = () => {
     <div className="project container">
       <BackBtn></BackBtn>
       <section className="project__header-title flex flex-fd-c ai-c">
-        <img
-          className="project__head-img"
-          src={project.headImg}
-          alt="imagem capa"
-        />
+        <div className="project__head-img">
+          {project.headImg ? (
+            <img src={project.headImg} alt="imagem capa" />
+          ) : (
+            <LoadBar></LoadBar>
+          )}
+        </div>
         <div className="project__btns">
           <LinkBtn text="Código" link={project.gitLink} blank></LinkBtn>
           <LinkBtn text="Visitar" link={project.siteLink} blank></LinkBtn>
@@ -41,7 +44,9 @@ const Project = () => {
         <div className="project__text-box">
           <h1 className="fs-title">{project.title.toUpperCase()}</h1>
           {project.descList.map((desc) => (
-            <p className="fs-subtitle">{desc}</p>
+            <p key={desc.length} className="fs-subtitle">
+              {desc}
+            </p>
           ))}
         </div>
         <div className="project__text-box">
@@ -52,6 +57,7 @@ const Project = () => {
       <section className="project__more-info flex jc-sb">
         {project.extraInfo.map((extra) => (
           <ImgBlock
+            key={extra.title}
             title={extra.title}
             desc={extra.desc}
             img={extra.headImg}

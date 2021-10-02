@@ -15,6 +15,7 @@ const Projects = () => {
         <h1 className="fs-title">{"PROJETOS =>"}</h1>
         {projects.map((project) => (
           <ProjectsItem
+            key={project.title}
             name={project.title}
             desc={project.titleDesc}
           ></ProjectsItem>

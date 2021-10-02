@@ -6,3 +6,21 @@
     transform: scale(100%);
   }
 }
+
+@keyframes opacityZeroToMax {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes tranlateLeftToRight {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(400%);
+  }
+}

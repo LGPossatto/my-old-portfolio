@@ -1,0 +1,22 @@
+@import "../../assets/styles/varibles.style";
+@import "../../assets/styles/animations.style";
+
+.load-bar {
+  overflow: hidden;
+  position: absolute;
+  width: 100%;
+  height: calc(5px + 0.5vh);
+
+  background-color: $color-gray;
+
+  span {
+    display: block;
+    width: 25%;
+    height: 100%;
+
+    background-color: $color-white;
+
+    transform: translateX(-100%);
+    animation: tranlateLeftToRight 2.5s infinite linear;
+  }
+}
