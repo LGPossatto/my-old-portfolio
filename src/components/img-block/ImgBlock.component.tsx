@@ -1,7 +1,9 @@
 import { FC, useState } from "react";
-import ImgModal from "../img-modal/ImgModal.component";
 
 import "./imgBlock.style.scss";
+
+import LoadBar from "../load-bar/LoadBar.component";
+import ImgModal from "../img-modal/ImgModal.component";
 
 interface IImgBlock {
   title: string;
@@ -12,6 +14,7 @@ interface IImgBlock {
 
 const ImgBlock: FC<IImgBlock> = ({ title, desc, img, imgDisplay }) => {
   const [showModal, setShowModal] = useState(false);
+  const [loaded, setLoaded] = useState(false);
 
   return (
     <div className="img-block">
@@ -20,7 +23,16 @@ const ImgBlock: FC<IImgBlock> = ({ title, desc, img, imgDisplay }) => {
         show={showModal}
         setShow={setShowModal}
       ></ImgModal>
-      <img src={img} alt="imagem capa" onClick={() => setShowModal(true)} />
+      <div className="img-block__img-box">
+        {loaded ? null : <LoadBar></LoadBar>}
+        <img
+          style={loaded ? {} : { display: "none" }}
+          src={img}
+          alt="imagem capa"
+          onClick={() => setShowModal(true)}
+          onLoad={() => setLoaded(true)}
+        />
+      </div>
       <h1 className="fs-subtitle">{title}</h1>
       <p className="fs-text">{desc}</p>
     </div>

@@ -14,6 +14,7 @@ import ImgBlock from "../../components/img-block/ImgBlock.component";
 
 const Project = () => {
   const [project, setProject] = useState<IProject>();
+  const [loaded, setLoaded] = useState(false);
   const { projects } = useContext(projectsContext);
   const { id } = useParams<{ id: string }>();
 
@@ -31,11 +32,13 @@ const Project = () => {
       <BackBtn></BackBtn>
       <section className="project__header-title flex flex-fd-c ai-c">
         <div className="project__head-img">
-          {project.headImg ? (
-            <img src={project.headImg} alt="imagem capa" />
-          ) : (
-            <LoadBar></LoadBar>
-          )}
+          {loaded ? null : <LoadBar></LoadBar>}
+          <img
+            style={loaded ? {} : { display: "none" }}
+            src={project.headImg}
+            alt="imagem capa"
+            onLoad={() => setLoaded(true)}
+          />
         </div>
         <div className="project__btns">
           <LinkBtn text="Código" link={project.gitLink} blank></LinkBtn>

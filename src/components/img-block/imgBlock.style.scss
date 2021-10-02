@@ -7,12 +7,20 @@
 
   text-align: center;
 
-  & > img {
+  &__img-box {
     cursor: pointer;
-    object-fit: cover;
+    position: relative;
 
     width: 100%;
+    min-height: calc(5px + 0.5vh);
     margin-bottom: 25px;
+
+    background-color: $color-gray-dark;
+
+    img {
+      object-fit: cover;
+      width: 100%;
+    }
   }
 
   h1 {
