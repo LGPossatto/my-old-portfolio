@@ -3,6 +3,8 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 import ProjectsProvider from "./context/ProjectsProvider.context";
 
 import Navbar from "./components/navbar/Navbar.component";
+import Footer from "./components/footer/Footer.component";
+
 import Home from "./pages/home/Home.page";
 import More from "./pages/more/More.page";
 import Project from "./pages/project/Project.page";
@@ -19,6 +21,7 @@ const App = () => {
           <Route exact path="/projects/:id" component={Project}></Route>
           <Route component={NotFound}></Route>
         </Switch>
+        <Footer></Footer>
       </BrowserRouter>
     </ProjectsProvider>
   );

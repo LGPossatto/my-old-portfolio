@@ -2,6 +2,14 @@ import ProjectsContext, { IProjects } from "./ProjectsContext.context";
 
 //import imgTest from "../assets/images/placeholder.jpg";
 
+import imgECP from "../assets/images/img-e-commerce-product.jpg";
+import imgECPs from "../assets/images/img-e-commerce-product-small.jpg";
+import imgECS from "../assets/images/img-e-commerce-shop.jpg";
+import imgECSs from "../assets/images/img-e-commerce-shop-small.jpg";
+import imgECM from "../assets/images/img-e-commerce-mobile.png";
+import imgECMs from "../assets/images/img-e-commerce-mobile-small.png";
+import imgECH from "../assets/images/img-e-commerce-main.jpg";
+
 import imgTC from "../assets/images/img-twitter-comment.jpg";
 import imgTCs from "../assets/images/img-twitter-comment-small.jpg";
 import imgTE from "../assets/images/img-twitter-explore.jpg";
@@ -28,6 +36,73 @@ import imgSH from "../assets/images/img-server-main.jpg";
 const ProjectsProvider = (props: any) => {
   const value: IProjects = {
     projects: [
+      {
+        headImg: imgECH,
+        title: "e-commerce",
+        titleDesc: "Um e-commerce feito com React",
+        descList: [
+          "Este site é um E-Commerce, onde é possível navegar por páginas e encontrar produtos, os adicionando em um carrinho para realizar a compra mais tarde*.",
+          "O site foi feito com base no “design” Clay Shop E-Commerce encontrado no site UI Store Design. Este projeto possui algumas das melhorias que falta no projeto Twitter Clone..",
+          "*O projeto não esta finalizado, portanto, não contém todas as funcionalidades necessárias. O projeto esta sendo feito diariamente, por isso, esta recebendo modificações constantemente.",
+        ],
+        tech: "HTML CSS SASS TypeScript React",
+        gitLink: "https://github.com/LGPossatto/e-commerce-clay",
+        siteLink: "https://claycommerce.netlify.app/",
+        extraInfo: [
+          {
+            title: "Mobile",
+            desc: "Design responsivo dependendo da largura da tela do dispositivo.",
+            headImg: imgECMs,
+            displayImg: imgECM,
+          },
+          {
+            title: "Shop",
+            desc: "Página para procurar produtos.",
+            headImg: imgECSs,
+            displayImg: imgECS,
+          },
+          {
+            title: "Produto",
+            desc: "Mais detalhes sobre o produto escolhido.",
+            headImg: imgECPs,
+            displayImg: imgECP,
+          },
+        ],
+      },
+      {
+        headImg: imgSH,
+        title: "graphql_server",
+        titleDesc: "Um servidor backend feito com GraphQl e TypeScript",
+        descList: [
+          'Este projeto é uma API backend em GraphQL. Nesta API é possível criar e fazer “login” em uma conta, onde se pode criar "eventos", e salvar esses "eventos".',
+          "O projeto faz parte de um curso em que toda a parte frontend e backend é desenvolvida. Aqui só se encontra a parte backend, onde foi modificada para utilizar TypeScript e outras tecnologias.",
+          "Eu utilizei esse projeto para aprender mais sobre backend, GraphQL e TypeScript.",
+        ],
+        tech: "NodeJs - Express - TypeScript - MongoDB - Mongoose - Typegoose GraphQL - Type-GraphQl - Apollo-Server-Express",
+        gitLink:
+          "https://github.com/LGPossatto/graphql-apollo-mongodb-typescript-event-booking",
+        siteLink: "https://type-graphql-api.herokuapp.com/graphql",
+        extraInfo: [
+          {
+            title: "Query Events",
+            desc: "Busque por eventos, e receba de volta só aquilo que foi pedido.",
+            headImg: imgSQs,
+            displayImg: imgSQ,
+          },
+          {
+            title: "Contas de Usuário",
+            desc: "Crie contas de usuários e faça login através de JSON Web Tokens.",
+            headImg: imgSEs,
+            displayImg: imgSE,
+          },
+          {
+            title: "Crie Eventos",
+            desc: "Crie eventos, salve e exclua como desejar.",
+            headImg: imgSUs,
+            displayImg: imgSE,
+          },
+        ],
+      },
       {
         headImg: imgTH,
         title: "twitter_clone",
@@ -91,40 +166,6 @@ const ProjectsProvider = (props: any) => {
             desc: "Busque notícias mais específicas através da barra de pesquisa.",
             headImg: imgNCs,
             displayImg: imgNC,
-          },
-        ],
-      },
-      {
-        headImg: imgSH,
-        title: "graphql_server",
-        titleDesc: "Um servidor backend feito com GraphQl e TypeScript",
-        descList: [
-          'Este projeto é uma API backend em GraphQL. Nesta API é possível criar e fazer “login” em uma conta, onde se pode criar "eventos", e salvar esses "eventos".',
-          "O projeto faz parte de um curso em que toda a parte frontend e backend é desenvolvida. Aqui só se encontra a parte backend, onde foi modificada para utilizar TypeScript e outras tecnologias.",
-          "Eu utilizei esse projeto para aprender mais sobre backend, GraphQL e TypeScript.",
-        ],
-        tech: "NodeJs - Express - TypeScript - MongoDB - Mongoose - Typegoose GraphQL - Type-GraphQl - Apollo-Server-Express",
-        gitLink:
-          "https://github.com/LGPossatto/graphql-apollo-mongodb-typescript-event-booking",
-        siteLink: "https://type-graphql-api.herokuapp.com/graphql",
-        extraInfo: [
-          {
-            title: "Query Events",
-            desc: "Busque por eventos, e receba de volta só aquilo que foi pedido.",
-            headImg: imgSQs,
-            displayImg: imgSQ,
-          },
-          {
-            title: "Contas de Usuário",
-            desc: "Crie contas de usuários e faça login através de JSON Web Tokens.",
-            headImg: imgSEs,
-            displayImg: imgSE,
-          },
-          {
-            title: "Crie Eventos",
-            desc: "Crie eventos, salve e exclua como desejar.",
-            headImg: imgSUs,
-            displayImg: imgSE,
           },
         ],
       },
