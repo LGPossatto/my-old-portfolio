@@ -41,9 +41,9 @@ const ProjectsProvider = (props: any) => {
         title: "e-commerce",
         titleDesc: "Um e-commerce feito com React",
         descList: [
-          "Este site é um E-Commerce, onde é possível navegar por páginas e encontrar produtos, os adicionando em um carrinho para realizar a compra mais tarde*.",
-          "O site foi feito com base no “design” Clay Shop E-Commerce encontrado no site UI Store Design. Este projeto possui algumas das melhorias que falta no projeto Twitter Clone..",
-          "*O projeto não esta finalizado, portanto, não contém todas as funcionalidades necessárias. O projeto esta sendo feito diariamente, por isso, esta recebendo modificações constantemente.",
+          "Este site é um E-Commerce, onde é possível navegar por páginas e encontrar produtos, os adicionando em um carrinho para realizar a compra mais tarde.",
+          "O site foi feito com base no “design” Clay Shop E-Commerce encontrado no site UI Store Design. Também foi utilizado a Fake Store API para mostrar alguns produtos e poder adicionar ou remover produtos do carrinho",
+          "*O projeto não esta finalizado, portanto, não contém todas as funcionalidades necessárias. O objetivo principal desse app é a tradução do design para o navegador, utilizando o que o React tem a oferecer.",
         ],
         tech: "HTML CSS SASS TypeScript React",
         gitLink: "https://github.com/LGPossatto/e-commerce-clay",
