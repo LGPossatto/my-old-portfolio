@@ -1,0 +1,16 @@
+.cta-btn {
+  cursor: pointer;
+
+  padding: 10px 50px;
+
+  border: none;
+  border-radius: 5px;
+
+  &:hover {
+    opacity: 0.95;
+  }
+
+  &:active {
+    opacity: 0.85;
+  }
+}

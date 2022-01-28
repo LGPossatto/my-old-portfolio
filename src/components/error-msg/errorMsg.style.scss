@@ -1,0 +1,11 @@
+@import "../../assets/styles/varibles.style";
+@import "../../assets/styles/mixins.style";
+
+.error-msg {
+  display: block;
+  min-height: 4.2rem;
+
+  @include bp-big {
+    min-height: calc(2.1rem + 0.5vw);
+  }
+}

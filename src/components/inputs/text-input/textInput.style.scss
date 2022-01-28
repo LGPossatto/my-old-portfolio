@@ -1,0 +1,24 @@
+@import "../../../assets/styles/varibles.style";
+
+.text-input {
+  margin: calc(25px + 1vh) 0;
+
+  label {
+    margin-bottom: 15px;
+  }
+
+  input {
+    min-width: 350px;
+    width: 50%;
+    padding: 10px;
+
+    border: 1px solid $color-gray;
+    border-radius: 5px;
+
+    background-color: $color-gray-dark;
+
+    &:focus {
+      outline: 1px solid $color-white;
+    }
+  }
+}

@@ -1,0 +1,23 @@
+@import "../../assets/styles/varibles.style";
+
+.contact-form {
+  padding: calc(50px + 5vh) 0;
+
+  &__line {
+    display: block;
+    width: 100%;
+    height: 5px;
+
+    margin: calc(10px + 1vh) 0;
+
+    background-color: $color-gray-dark;
+
+    div > h1 {
+      margin: 100px 0;
+    }
+  }
+
+  & > form button {
+    margin-top: 25px;
+  }
+}
