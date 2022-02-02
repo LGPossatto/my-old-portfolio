@@ -1,4 +1,5 @@
 @import "../../assets/styles/varibles.style";
+@import "../../assets/styles/mixins.style";
 
 .contact-form {
   padding: calc(50px + 5vh) 0;
@@ -19,5 +20,17 @@
 
   & > form button {
     margin-top: 25px;
+  }
+
+  form {
+    width: 50%;
+
+    @include bp-small {
+      width: 75%;
+    }
+
+    @include bp-tablet {
+      width: 100%;
+    }
   }
 }

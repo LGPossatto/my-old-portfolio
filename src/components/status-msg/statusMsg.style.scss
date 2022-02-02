@@ -1,9 +1,10 @@
 @import "../../assets/styles/varibles.style";
 @import "../../assets/styles/mixins.style";
 
-.error-msg {
+.status-msg {
   display: block;
   min-height: 4.2rem;
+  margin-bottom: calc(25px + 1vh);
 
   @include bp-big {
     min-height: calc(2.1rem + 0.5vw);
