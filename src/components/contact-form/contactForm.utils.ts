@@ -39,6 +39,8 @@ export const handleSubmit = async (
         }),
       });
 
+      console.log(res);
+
       if (!res) {
         throw new Error("Algo deu errado, tente novamente!");
       }
@@ -49,9 +51,9 @@ export const handleSubmit = async (
 
       setSuccessMsg = setTimeout(() => setStatusMessage(""), 3000);
 
-      setName("");
-      setEmail("");
-      setMessage("");
+      // setName("");
+      // setEmail("");
+      // setMessage("");
     } else {
       throw new Error("Preencha todos os campos antes de confirmar!");
     }

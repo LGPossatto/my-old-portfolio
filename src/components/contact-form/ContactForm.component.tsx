@@ -22,6 +22,7 @@ const ContactForm = () => {
       <div className="container">
         <form
           data-netlify="true"
+          data-netlify-honeypot="bot-field"
           name="contact"
           method="POST"
           onSubmit={(e) =>
@@ -38,6 +39,11 @@ const ContactForm = () => {
             )
           }
         >
+          <input type="hidden" name="form-name" value="contact" />
+          <div hidden>
+            <input name="bot-field" />
+          </div>
+
           <h1 className="fs-title">{"Entre em Contato =>"}</h1>
           <TextInput
             label="Seu Nome"
