@@ -6,7 +6,7 @@ const encode = (data: { [x: string]: string }) => {
     .join("&");
 };
 
-export const handleSubmit = async (
+export const handleSubmit = (
   e: React.FormEvent<HTMLFormElement>,
   name: string,
   setName: React.Dispatch<React.SetStateAction<string>>,
@@ -33,7 +33,7 @@ export const handleSubmit = async (
       }
 
       // try to submit form via netlify form submission
-      const res = await fetch("/", {
+      fetch("/", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: encode({
@@ -42,13 +42,10 @@ export const handleSubmit = async (
           email,
           message,
         }),
-      });
-
-      console.log(res);
-
-      if (!res) {
+      }).catch((error) => {
+        console.log(error);
         throw new Error("Algo deu errado, tente novamente!");
-      }
+      });
 
       // show success message and reset inputs
       setStatus(true);
@@ -56,9 +53,9 @@ export const handleSubmit = async (
 
       setSuccessMsg = setTimeout(() => setStatusMessage(""), 3000);
 
-      // setName("");
-      // setEmail("");
-      // setMessage("");
+      setName("");
+      setEmail("");
+      setMessage("");
     } else {
       throw new Error("Preencha todos os campos antes de confirmar!");
     }

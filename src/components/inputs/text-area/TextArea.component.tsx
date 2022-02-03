@@ -1,20 +1,22 @@
 import "./textArea.style.scss";
 
 interface props {
+  id: string;
   label: string;
   value: string;
   setValue: Function;
 }
 
-const TextArea = ({ label, value, setValue }: props) => {
+const TextArea = ({ id, label, value, setValue }: props) => {
   return (
     <div className="text-area flex flex-fd-c">
-      <label className="fs-subtitle" htmlFor={label}>
+      <label className="fs-subtitle" htmlFor={id}>
         {`${label} =>`}
       </label>
       <textarea
         className="fs-subtitle"
-        id={label}
+        id={id}
+        name={id}
         value={value}
         onChange={(e) => setValue(e.target.value)}
       />

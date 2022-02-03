@@ -1,22 +1,24 @@
 import "./textInput.style.scss";
 
 interface props {
+  id: string;
   label: string;
   value: string;
   setValue: Function;
   type?: "text" | "email";
 }
 
-const TextInput = ({ label, value, setValue, type = "text" }: props) => {
+const TextInput = ({ id, label, value, setValue, type = "text" }: props) => {
   return (
     <div className="text-input flex flex-fd-c">
-      <label className="fs-subtitle" htmlFor={label}>
+      <label className="fs-subtitle" htmlFor={id}>
         {`${label} =>`}
       </label>
       <input
         className="fs-subtitle"
         type={type}
-        id={label}
+        id={id}
+        name={id}
         value={value}
         onChange={(e) => setValue(e.target.value)}
       />

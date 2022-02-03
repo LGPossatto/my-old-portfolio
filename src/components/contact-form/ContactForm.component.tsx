@@ -46,16 +46,19 @@ const ContactForm = () => {
 
           <h1 className="fs-title">{"Entre em Contato =>"}</h1>
           <TextInput
+            id="name"
             label="Seu Nome"
             value={name}
             setValue={setName}
           ></TextInput>
           <TextInput
+            id="email"
             label="Seu Email"
             value={email}
             setValue={setEmail}
           ></TextInput>
           <TextArea
+            id="message"
             label="Sua Mensagem"
             value={message}
             setValue={setMessage}
