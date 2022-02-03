@@ -1,5 +1,10 @@
-import { encode } from "querystring";
 import { emailExp } from "../../assets/utils/emailExp";
+
+const encode = (data: { [x: string]: string }) => {
+  return Object.keys(data)
+    .map((key) => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+    .join("&");
+};
 
 export const handleSubmit = async (
   e: React.FormEvent<HTMLFormElement>,
