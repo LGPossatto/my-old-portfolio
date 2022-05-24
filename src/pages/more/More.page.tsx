@@ -4,6 +4,12 @@ import LinkBtn from "../../components/btn/link-btn/LinkBtn.component";
 import "./more.style.scss";
 
 const More = () => {
+  const yearsOld =
+    Math.floor(
+      // @ts-ignore
+      (new Date() - new Date("12/07/1994")) / 31536000000
+    ) || "27";
+
   return (
     <section className="more container">
       <BackBtn></BackBtn>
@@ -13,7 +19,7 @@ const More = () => {
           <strong>Nome:</strong> Luiz Gustavo Possatto
         </p>
         <p className="fs-text">
-          <strong>Idade:</strong> 26 anos
+          <strong>Idade:</strong> {yearsOld} anos
         </p>
         <p className="fs-text">
           <strong>Email:</strong> LGPossatto@gmail.com
@@ -46,7 +52,7 @@ const More = () => {
       <div className="more__about">
         <h1 className="fs-subtitle">{"Sobre Min =>"}</h1>
         <p className="fs-text">
-          Olá, me chamo Luiz Gustavo, tenho 26 anos e sou formado em engenharia
+          Olá, me chamo Luiz Gustavo, tenho 27 anos e sou formado em engenharia
           elétrica. Estou buscando um emprego como desenvolvedor web, onde eu
           possa usar meus conhecimentos e continuar aprendendo. Tenho boas
           habilidades de trabalho em equipe, sou organizado, comprometido e
@@ -60,6 +66,9 @@ const More = () => {
           - Engenharia Elétrica - Universidade Dinâmica das Cataratas;
         </p>
         <h2 className="fs-text">{"Cursos Relevantes ->"}</h2>
+        <p className="fs-text">
+          - Programa de Talentos em TI e Comunicação - PTI;
+        </p>
         <p className="fs-text">- C# Completo + POO - Nelio Alves;</p>
         <p className="fs-text">- Programação em Python - Geek University;</p>
         <p className="fs-text">- React Front To Back - Brad Traversy;</p>

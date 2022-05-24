@@ -2,6 +2,14 @@ import ProjectsContext, { IProjects } from "./ProjectsContext.context";
 
 //import imgTest from "../assets/images/placeholder.jpg";
 
+import imgCC from "../assets/images/img-camp-cards.png";
+import imgCCs from "../assets/images/img-camp-cards-small.png";
+import imgCS from "../assets/images/img-camp-shop.png";
+import imgCSs from "../assets/images/img-camp-shop-small.png";
+import imgCM from "../assets/images/img-camp-mobile.png";
+import imgCMs from "../assets/images/img-camp-mobile-small.png";
+import imgCH from "../assets/images/img-camp-main.png";
+
 import imgECP from "../assets/images/img-e-commerce-product.jpg";
 import imgECPs from "../assets/images/img-e-commerce-product-small.jpg";
 import imgECS from "../assets/images/img-e-commerce-shop.jpg";
@@ -36,6 +44,40 @@ import imgSH from "../assets/images/img-server-main.jpg";
 const ProjectsProvider = (props: any) => {
   const value: IProjects = {
     projects: [
+      {
+        headImg: imgCH,
+        title: "untitled-camp",
+        titleDesc: "Um app fullstack",
+        descList: [
+          "Este projeto é um app fullstack, onde, na parte frontend é possível navegar por páginas, encontrar produtos e adicioná-los em um carrinho e criar contas pessoais. Já o backend é uma API que da suporte ao frontend.",
+          "O frontend é um site sobre natureza, motocross e off-road. O site possui uma seção de shopping onde se é possível procurar por produtos e os adicioná-los a um carrinho, o site também oferece a opção de criação de uma conta pessoal simples.",
+          "O backend é uma API, ela oferece toda a lógica necessária para o funcionamento da parte frontend de modo satisfatório, como criar conta, adicionar produtos ao carrinho de um usuário, etc.",
+          "*O objetivo desse projeto era criar uma aplicação fullstack, onde o frontend interagia e consumia as informações providas pelo backend.",
+        ],
+        tech: "TypeScript Vite React NodeJs Express MongoDB Mongoose jsonwebtoken",
+        gitLink: "https://github.com/LGPossatto/untitled-camp",
+        siteLink: "https://untitledcamp.netlify.app/",
+        extraInfo: [
+          {
+            title: "Mobile",
+            desc: "Design responsivo dependendo da largura da tela do dispositivo.",
+            headImg: imgCMs,
+            displayImg: imgCM,
+          },
+          {
+            title: "Shop",
+            desc: "Página para procurar produtos.",
+            headImg: imgCSs,
+            displayImg: imgCS,
+          },
+          {
+            title: "Cards",
+            desc: "Cards promocionais e especiais.",
+            headImg: imgCCs,
+            displayImg: imgCC,
+          },
+        ],
+      },
       {
         headImg: imgECH,
         title: "e-commerce",
